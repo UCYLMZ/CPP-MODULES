@@ -19,12 +19,13 @@ int main(void)
 		{
 			if (index == 0)
 			{
-				std::cout << "The PhoneBook is empty!" << std::endl;
+				std::cout << "*** The PhoneBook is empty!" << std::endl;
 				continue ;
 			}
 			book.search(index);
 		}
-		std::cout << index << std::endl;
+		else
+			std::cout << "*** Wrong command!\n";
 	}
 	return (0);
 }
