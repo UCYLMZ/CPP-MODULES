@@ -2,12 +2,12 @@
 
 Zombie::Zombie(void)
 {
-	std::cout << "Nameless constructor called." << std::endl;
+	std::cout << "Default constructor called." << std::endl;
 }
 
 Zombie::Zombie(std::string name)
 {
-	std::cout << "Constructor called." << std::endl;
+	std::cout << name + " Copy constructor called." << std::endl;
 	this->name = name;
 }
 

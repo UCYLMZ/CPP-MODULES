@@ -2,16 +2,17 @@
 
 int main(void)
 {
-	Zombie *elem2 = newZombie("Neighbour");
-	elem2->announce();
-	delete elem2;
-	elem2->announce();
-
-	Zombie elem1;
-	elem1.announce();
-
-	elem1.setName("Woman");
-	elem1.announce();
-
 	randomChump("Random");
+	
+	Zombie *zomb1 = newZombie("zomb1");
+	zomb1->announce();
+	delete zomb1;
+
+	Zombie zomb2;
+	zomb2.announce();
+	zomb2.setName("zomb2");
+	zomb2.announce();
+
+	Zombie zomb3("zomb3");
+	zomb3.announce();
 }
