@@ -35,7 +35,7 @@ std::ostream &operator<<(std::ostream &output, const Fixed &fixed)
 	return (output);
 }
 
-void Fixed::operator=(const Fixed& elem)
+Fixed& Fixed::operator=(const Fixed& elem)
 {
 	std::cout << "Copy assignment operator called." << std::endl;
 	this->fixedValue = elem.getRawBits();

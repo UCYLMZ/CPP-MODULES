@@ -13,7 +13,7 @@ class Fixed
 			Fixed( const Fixed& elem );
 			~Fixed( void );
 
-			void operator=( const Fixed& elem );
+			Fixed& operator=( const Fixed& elem );
 
 			int getRawBits( void ) const;
 			void setRawBits( int const raw );
