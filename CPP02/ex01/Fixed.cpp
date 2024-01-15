@@ -39,16 +39,19 @@ Fixed& Fixed::operator=(const Fixed& elem)
 {
 	std::cout << "Copy assignment operator called." << std::endl;
 	this->fixedValue = elem.getRawBits();
+
+	return (*this);
 }
 
-float Fixed::toFloat(void) const
+float	Fixed::toFloat(void) const
 {
-	return ( float(this->fixedValue / pow(2, this->fraction)) );
+	float value = float(this->fixedValue) / (1 << this->fraction);
+	return (value);
 }
 
-int Fixed::toInt(void) const
+int		Fixed::toInt(void) const
 {
-	return ( this->fixedValue >> this->fraction );
+	return (this->fixedValue >> this->fraction);
 }
 
 int Fixed::getRawBits(void) const
