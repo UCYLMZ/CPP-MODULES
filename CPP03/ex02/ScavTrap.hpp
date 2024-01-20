@@ -10,6 +10,8 @@ class ScavTrap : public ClapTrap
 		ScavTrap(std::string name);
 		~ScavTrap(void);
 
+		ScavTrap& operator=(const ScavTrap& elem);
+
 		std::string getName(void);
 		unsigned int getHitPoints(void);
 		unsigned int getEnergyPoint(void);

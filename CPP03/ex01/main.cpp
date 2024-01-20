@@ -22,6 +22,8 @@ int main()
     printValues(clapTrap2);
 
     clapTrap2.beRepaired(2);
+
+    clapTrap2 = clapTrap;
     
     printValues(clapTrap2);
 

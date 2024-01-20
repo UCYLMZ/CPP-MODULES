@@ -1,16 +1,32 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-int main(void)
+void printValues(ClapTrap clapTrap)
 {
-	ScavTrap elem("Yunus");
+    std::cout << "\nName: " + clapTrap.getName() << "\nenergyPoints: " << clapTrap.getEnergyPoint()
+            << "\nhitPoints: " << clapTrap.getHitPoints() << std::endl << std::endl;
+}
 
-	elem.attack("olcay");
-	// std::cout << elem.getHitPoints() << std::endl;
-	elem.takeDamage(10);
-	// std::cout << elem.getHitPoints() << std::endl;
-	elem.beRepaired(2);
-	std::cout << elem.getHitPoints() << std::endl;
-	// elem.guardGate();
-	elem.takeDamage(100);
-	elem.attack("olcay");
+int main()
+{
+    FragTrap fragTrap("utku");
+
+    FragTrap fragTrap2("can");
+
+    printValues(fragTrap);
+    printValues(fragTrap2);
+
+    fragTrap.attack("can");
+    fragTrap2.takeDamage(30);
+
+    printValues(fragTrap);
+    printValues(fragTrap2);
+
+    fragTrap2.beRepaired(2);
+
+    fragTrap2 = fragTrap;
+    
+    printValues(fragTrap2);
+
+    fragTrap.highFiveGuys();
+    return (0);
 }

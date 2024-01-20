@@ -19,6 +19,16 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "Destructor Function Called." << std::endl;
 }
 
+ClapTrap& ClapTrap::operator=(const ClapTrap& elem)
+{
+	this->name = elem.name;
+	this->hitPoints = elem.hitPoints;
+	this->energyPoints = elem.energyPoints;
+	this->attackDamage = elem.attackDamage;
+
+	return (*this);
+}
+
 std::string ClapTrap::getName(void)
 {
 	return (this->name);

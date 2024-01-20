@@ -16,6 +16,8 @@ public:
 	ClapTrap(std::string name);
 	~ClapTrap();
 
+	ClapTrap& operator=(const ClapTrap& elem);
+
 	std::string getName(void);
 	unsigned int getHitPoints(void);
 	unsigned int getEnergyPoint(void);

@@ -2,12 +2,12 @@
 
 ClapTrap::ClapTrap(void)
 {
-	std::cout << "ClapTrap Default Constructor Called." << std::endl;
+	std::cout << "Default Constructor Called." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "ClapTrap Constructor Called." << std::endl;
+	std::cout << "Constructor Called." << std::endl;
 	this->name = name;
 	this->hitPoints = 10;
 	this->energyPoints = 10;
@@ -16,7 +16,17 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ClapTrap Destructor Called." << std::endl;
+	std::cout << "Destructor Function Called." << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& elem)
+{
+	this->name = elem.name;
+	this->hitPoints = elem.hitPoints;
+	this->energyPoints = elem.energyPoints;
+	this->attackDamage = elem.attackDamage;
+
+	return (*this);
 }
 
 std::string ClapTrap::getName(void)
