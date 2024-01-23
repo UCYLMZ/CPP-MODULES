@@ -15,7 +15,7 @@ int main()
     printValues(clapTrap);
     printValues(clapTrap2);
 
-    clapTrap.attack("can");
+    clapTrap.attack("bot");
     clapTrap2.takeDamage(3);
 
     printValues(clapTrap);

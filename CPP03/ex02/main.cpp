@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-void printValues(ClapTrap clapTrap)
+void printValues(ClapTrap& clapTrap)
 {
     std::cout << "\nName: " + clapTrap.getName() << "\nenergyPoints: " << clapTrap.getEnergyPoint()
             << "\nhitPoints: " << clapTrap.getHitPoints() << std::endl << std::endl;

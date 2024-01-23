@@ -14,6 +14,7 @@ protected:
 public:
 	ClapTrap(void);
 	ClapTrap(std::string name);
+	ClapTrap(ClapTrap& elem);
 	~ClapTrap();
 
 	ClapTrap& operator=(const ClapTrap& elem);

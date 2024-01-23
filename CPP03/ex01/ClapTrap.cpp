@@ -3,6 +3,10 @@
 ClapTrap::ClapTrap(void)
 {
 	std::cout << "Default Constructor Called." << std::endl;
+	this->name = "Default ClapTrap";
+	this->hitPoints = 10;
+	this->energyPoints = 10;
+	this->attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -12,6 +16,12 @@ ClapTrap::ClapTrap(std::string name)
 	this->hitPoints = 10;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
+}
+
+ClapTrap::ClapTrap(ClapTrap& elem)
+{
+	std::cout << "Copy constructor called." << std::endl;
+	this->operator=(elem);
 }
 
 ClapTrap::~ClapTrap(void)
