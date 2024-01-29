@@ -1,5 +1,5 @@
 NAME = Animals
-SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp Brain.cpp
+SRCS = AAnimal.cpp Cat.cpp Dog.cpp main.cpp Brain.cpp
 
 CC = c++
 

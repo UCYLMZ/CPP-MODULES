@@ -10,7 +10,8 @@ class Animal
 	public:
 		Animal(void);
 		Animal(std::string type);
-		~Animal(void);
+		Animal(const Animal& cpy);
+		virtual ~Animal(void);
 		Animal& operator=(const Animal& elem);
 
 		std::string getType(void) const;

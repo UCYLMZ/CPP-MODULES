@@ -2,21 +2,21 @@
 
 
 // Orthodox canonical requirements
-Cat::Cat(void) : Animal("Cat")
+Cat::Cat(void) : AAnimal("Cat")
 {
 	std::cout << "Cat Default constructor called!" << std::endl;
 	this->name = "Garfield";
 	this->brain = new Brain;
 }
 
-Cat::Cat(std::string name) : Animal("Cat")
+Cat::Cat(std::string name) : AAnimal("Cat")
 {
 	std::cout << "Cat constructor called!" << std::endl;
 	this->name = name;
 	this->brain = new Brain;
 }
 
-Cat::Cat(const Cat& cpy) : Animal(cpy)
+Cat::Cat(const Cat& cpy) : AAnimal(cpy)
 {
 	std::cout << "Cat copy constructor called!" << std::endl;
 	this->brain = new Brain;

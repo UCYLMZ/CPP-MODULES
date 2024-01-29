@@ -1,5 +1,5 @@
-NAME = Animals
-SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp Brain.cpp
+NAME = Materia
+SRCS = AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp main.cpp
 
 CC = c++
 
@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(SRCS)
-	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+	$(CC)  $(SRCS) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)

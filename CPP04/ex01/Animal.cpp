@@ -14,6 +14,12 @@ Animal::Animal(std::string type)
 	this->type = type;
 }
 
+Animal::Animal(const Animal& cpy)
+{
+	std::cout << "Animal Copy constructor called!" << std::endl;
+	*this = cpy;
+}
+
 Animal::~Animal(void)
 {
 	std::cout << "Animal destructor called!" << std::endl;
@@ -21,6 +27,7 @@ Animal::~Animal(void)
 
 Animal& Animal::operator=(const Animal& elem)
 {
+	std::cout << "Animal '=' operator called!" << std::endl;
 	this->type = elem.type;
 
 	return (*this);

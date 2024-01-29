@@ -2,21 +2,21 @@
 
 
 // Orthodox canonical requirements
-Dog::Dog(void) : Animal("Dog")
+Dog::Dog(void) : AAnimal("Dog")
 {
 	std::cout << "Dog Default constructor called!" << std::endl;
 	this->name = "Max";
 	this->brain = new Brain;
 }
 
-Dog::Dog(std::string name) : Animal("Dog")
+Dog::Dog(std::string name) : AAnimal("Dog")
 {
 	std::cout << "Dog constructor called!" << std::endl;
 	this->name = name;
 	this->brain = new Brain;
 }
 
-Dog::Dog(const Dog& cpy) : Animal(cpy)
+Dog::Dog(const Dog& cpy) : AAnimal(cpy)
 {
 	std::cout << "Dog copy constructor called!" << std::endl;
 	this->brain = new Brain;
