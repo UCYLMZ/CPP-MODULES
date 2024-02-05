@@ -16,7 +16,7 @@ class AForm
 		AForm(std::string name);
 		AForm(std::string name, int gradeToSign, int gradeToExecute);
 		AForm(AForm& elem);
-		~AForm(void);
+		virtual ~AForm(void);
 
 		AForm& operator=(AForm const& elem);
 
@@ -35,6 +35,7 @@ class AForm
 			public:
 				virtual const char* what() const throw();
 		};
+		virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream& operator<<(std::ostream &os, const AForm& elem);

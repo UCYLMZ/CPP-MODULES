@@ -22,6 +22,8 @@ class PresidentalPardonForm : public AForm
 			public:
 				virtual const char* what() const throw();
 		};
+
+		void execute(Bureaucrat const & executor) const;
 };
 
 std::ostream& operator<<(std::ostream &os, const PresidentalPardonForm& elem);

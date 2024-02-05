@@ -27,6 +27,18 @@ PresidentalPardonForm & PresidentalPardonForm::operator=(PresidentalPardonForm c
 std::string PresidentalPardonForm::getTarget(void){ return (this->target); }
 
 
+// Member function
+void PresidentalPardonForm::execute(Bureaucrat const & executor) const
+{
+	if (!this->getIsSigned())
+		throw AuthenticateException();
+	else if(this->getGradeToExecute() < executor.getGrade())
+		throw GradeTooLowException();
+	else
+		std::cout << this->target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
+}
+
+
 // << Operator Overload
 std::ostream& operator<<(std::ostream &os, const PresidentalPardonForm& elem)
 {
