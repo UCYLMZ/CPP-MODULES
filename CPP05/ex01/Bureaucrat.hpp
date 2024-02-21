@@ -19,7 +19,7 @@ class Bureaucrat
 		Bureaucrat(Bureaucrat& elem);
 		~Bureaucrat(void);
 
-		Bureaucrat& operator=(Bureaucrat& elem);
+		Bureaucrat& operator=(Bureaucrat const & elem);
 
 		std::string getName(void) const;
 		int getGrade(void) const;

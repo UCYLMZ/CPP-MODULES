@@ -34,7 +34,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		throw AuthenticateException();
 	if (executor.getGrade() > this->getGradeToExecute())
 		throw GradeTooLowException();
-	srand(time(NULL)); // resets the base or seed number for random number generator
+	srand(time(NULL));
 	std::cout << "drill drill!!!" << std::endl;
 	if (rand() % 2 == 1)
 		std::cout << this->target << " has beed robotomized succesfully!" << std::endl;

@@ -35,7 +35,7 @@ Bureaucrat::Bureaucrat(Bureaucrat& elem) : name(elem.getName()), grade(elem.getG
 
 Bureaucrat::~Bureaucrat(void) { std::cout << "Bureaucrat Destructor called!" << std::endl; }
 
-Bureaucrat& Bureaucrat::operator=(Bureaucrat& elem)
+Bureaucrat& Bureaucrat::operator=(Bureaucrat const & elem)
 {
 	std::cout << "Bureaucrat '=' Operator called!" << std::endl;
 	this->grade = elem.getGrade();
