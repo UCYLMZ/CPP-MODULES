@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	Base b1;
-
-	b1.generate();
+	Base * generated = generate();
+	identify(generated);
+	identify(*generated);
 }
