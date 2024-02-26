@@ -17,10 +17,6 @@ void ScalarConverter::convert(std::string str)
 {
 	char type = getType(str);
 
-	if ((type == 'f' || type == 'd' || type == 'i')
-		&& static_cast<float>(stof(str)) == 0 && str[0] == '-')
-		str.erase(0, 1);
-
 	if (type == 0)
 		std::cerr << "Wrong Argument Type Error!" << std::endl;
 	else if (type == 'c')
