@@ -7,7 +7,7 @@ int main(void)
 	Bureaucrat b1("utku", 1);
 	std::cout << b1;
 	try {
-		b1.gradeIncrement();
+		b1.gradeIncrement(1);
 	}
 	catch(std::exception & exception)
 	{
@@ -19,7 +19,7 @@ int main(void)
 	Bureaucrat b2("can");
 	std::cout << b2;
 	try {
-		b2.gradeDecrement();
+		b2.gradeDecrement(1);
 	}
 	catch(std::exception & exception)
 	{

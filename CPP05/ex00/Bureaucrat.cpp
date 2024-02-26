@@ -50,20 +50,20 @@ int Bureaucrat::getGrade(void) const { return (this->grade); }
 
 
 // Member functions
-void Bureaucrat::gradeIncrement(void) 
+void Bureaucrat::gradeIncrement(int amount) 
 {
-	if (this->getGrade() == 1)
+	if (this->getGrade() - amount < 1)
 		throw(Bureaucrat::GradeTooHighException());
 	else
-		this->grade -= 1;
+		this->grade -= amount;
 }
 
-void Bureaucrat::gradeDecrement(void)
+void Bureaucrat::gradeDecrement(int amount)
 {
-	if (this->grade > 149)
+	if (this->grade + amount > 149)
 		throw(Bureaucrat::GradeTooLowException());
 	else
-		this->grade += 1;
+		this->grade += amount;
 }
 
 
