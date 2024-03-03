@@ -4,11 +4,12 @@
 
 class ScalarConverter
 {
-	public:
+	private:
 		ScalarConverter(void);
 		ScalarConverter(ScalarConverter const & elem);
 		~ScalarConverter(void);
-		
+
+	public:
 		ScalarConverter& operator=(ScalarConverter const & elem);
 		
 		static void convert(std::string str);
