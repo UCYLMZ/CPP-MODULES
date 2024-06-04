@@ -1,5 +1,10 @@
 #pragma once 
 
+# include <iostream>
+# include <stack>
+# include <iterator>
+# include <list>
+
 template <typename T>
 class MutantStack : public std::stack<T>
 {
@@ -13,17 +18,30 @@ class MutantStack : public std::stack<T>
 
         MutantStack<T>& operator=(const MutantStack<T> &src);
 
+		// The 'c' in here is a internal container which defined in 
+		// stack class as protected so we can use it from deriven classes
+		// to override cotainer methods.
+
+		// Simplified version of stack class:
+		// template <typename T, typename Container = std::deque<T>>
+		// class stack {
+		// 	protected:
+    	// 		Container c;
+		// 	public:
+    			// stack member functions
+		// };
+	
 		iterator begin()
-		{ return this->container.begin(); }
+		{ return this->c.begin(); }
 
         const_iterator begin() const
-		{ return this->container.begin(); }
+		{ return this->c.begin(); }
 
         iterator end()
-		{ return this->container.end(); }
+		{ return this->c.end(); }
 
         const_iterator end() const
-		{ return this->container.end(); }
+		{ return this->c.end(); }
 };
 
 template <typename T>
