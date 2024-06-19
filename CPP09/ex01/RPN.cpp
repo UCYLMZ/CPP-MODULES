@@ -56,6 +56,7 @@ bool checkInput(std::string input)
 	}
 	if (nbrCount > 1 && nbrCount == optCount + 1)
 		return true ;
+	std::cout << "Error\n";
 	return false ;
 };
 
