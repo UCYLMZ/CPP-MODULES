@@ -27,28 +27,36 @@ bool isOperator(char c)
 bool checkInput(std::string input)
 {
 	int nbrCount = 0, optCount = 0;
-	bool nbrFlag = false;
+	bool spaceFlag = true;
 
 	for (int i = 0; input[i]; i++)
 	{
-		if (isdigit(input[i]))
+		if (isspace(input[i]))
 		{
-			if (nbrFlag == true)
+			spaceFlag = true;
+			continue ;
+		}
+		else if (isdigit(input[i]))
+		{
+			if (spaceFlag == false)
 			{
 				std::cout << "Error\n";
 				return false ;
 			}
 			nbrCount++;
-			nbrFlag = true;
+			spaceFlag = false;
+		}
+		else if (isOperator(input[i]))
+		{
+			if (spaceFlag == false)
+			{
+				std::cout << "Error\n";
+				return false ;
+			}
+			optCount++;
+			spaceFlag = false;
 		}
 		else
-			nbrFlag = false;
-
-		if (isOperator(input[i]))
-			optCount++;
-		else if (isspace(input[i]))
-			continue ;
-		else if (!isdigit(input[i]))
 		{
 			std::cout << "Error\n";
 			return false ;
